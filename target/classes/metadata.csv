@@ -1,0 +1,8 @@
+Student,gpa,java.lang.Double,False,null,null
+Student,sID,java.lang.Integer,True,idIndex,B+tree
+Student,major,java.lang.String,False,null,null
+Student,name,java.lang.String,False,nameIndex,B+tree
+Shop,address,java.lang.String,False,null,null
+Shop,id,java.lang.Integer,True,null,null
+City,population,java.lang.Integer,False,null,null
+City,name,java.lang.String,True,null,null
