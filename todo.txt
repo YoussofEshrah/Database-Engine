@@ -1,0 +1,40 @@
+Table Class:
+    DONE    Find out what attributes should be stored in the table class
+    DONE    Fix implementation of pagesList (should be referencing page names)
+    DONE    Check implementation of locating page for insert (whether or not to do it linearly or using binary 
+            search and min max values)
+    DONE    Fix updateTuple it takes string value not object and we dont handle that
+    DONE    binary search for updateTuple method in Page
+
+
+Page Class: 
+    DONE    Review instance variables of Page class (especially strClusteringKey)
+    DONE    Review all of Page class
+    DONE    Use min and max after inserts and deletions(BIG ISSUE ON DELETIONS HERE)
+    DONE    Fix toString() of Page
+    DONE    Fix updateTuple it takes string value not object and we dont handle that
+
+
+B+Tree Class:
+    DONE    modify delete method in index to delete using key and value pair so we can ensure that the correct
+            tuple gets deleted (and only delete the first match in case of duplicaters)
+    DONE    Add methods to load and save index to disk
+    DONE        Make the index have an attribute index name aswell so u dont have to specify the name of the
+                index when saving it and modify the save method to use the indexname
+
+DBApp Class:
+    DONE       Handle metadata file either by creating a metadata class that deals with it directly or
+               triple hashtable method
+    DONE     Priority of AND, XOR, OR  should be this order but the TA said AND, OR, XOR
+
+Metadata:
+    DONE
+
+
+
+
+DONE handle index changes in update, delete, overflow, insert by creating 2 methods in tupleclass
+DONE addDataToAvailableIndices(String tableName, String pageName)
+DONE deleteDataFromAvailableIndices(String tableName, String pageName)
+
+FIX: selectFromTable should throw exception if u insert one column with wrong type but then insert it again in another sqlterm with right type as we check using a hashmap so the id is overriden

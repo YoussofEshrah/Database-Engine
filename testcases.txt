@@ -1,0 +1,79 @@
+Create table:
+    WORKS:
+        create table normally works
+        create table with empty primary key name should throw error
+        create table with name that already exists should throw error
+        create table with no columns should throw an error
+    DOESN'T:
+
+
+Create index:
+
+
+    WORKS:
+        create index on an existing table with an existing column with no previous indices with the same name   
+            and previous index on the column
+        create index on table that doesnt exist should throw an error
+        create index on column that doesnt exist should throw an error
+        create index on column that already has an index should throw an error
+        create index with an already existing index name should throw an error
+    DOESN'T:
+
+
+
+
+Insert into table:
+    WORKS:
+        Insert with already existing primary key should throw error
+        insert to table that doesnt exist should throw error
+        insert with missing values should throw error
+        insert tuple with a new primary key-->works when validInsert is removed
+        insert with incompatible data types should throw error ------> name doesnt give error when not string-->fixed
+    DOESN'T:
+
+
+Update Table:
+    WORKS:
+        Id not integer throws an error
+        table not present should throw an error
+        primary key present in values to update should throw an error -------->not needed
+        incompatible data types should throw an error -------------> String Name doesnt work--->fixed
+
+
+    DOESN'T:
+
+Delete from Table:
+
+    WORKS:
+        Deleting tuple with a single criteria
+        Deleting tuple with mor than one criteria
+        table not present should throw an error
+        incompatible data types should throw an error
+        incompatible Column name should throw an error
+        Delete with index uses index correctly and works correctly -----> fixed
+        Deleting multiple tuples ------->fixed
+        delete without index works correctly
+
+    DOESN'T:
+
+Select from Table:
+    WORKS:
+        Different table names in sql terms array should throw an error
+        wrong amount of sql terms/operators throws an error
+        table not present should throw an error
+        incompatible data types of sqlTerms should throw an error
+        incorect column name
+        wrong operator used should throw an error 
+        no sql terms should throws an error --->fixed
+        select works with multiple terms and operators ---->fixed
+        Problem: XOR doesn't delete existing items ----->fixed
+        select with index uses index correctly and works correctly 
+        select without index Cases -------> all fixed:
+            - 2 ANDs, 3 terms 
+            - AND,OR, 3 terms ---------->fixed
+            - 2 ORs, 3 terms ----------->fixed
+            - 2 XOR/AND, XOR, 3 terms ---> XOR doesnt remove existing results from previous operations  ----->fixed
+
+    DOESN'T:
+
+
